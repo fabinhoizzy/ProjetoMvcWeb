@@ -9,12 +9,12 @@ class ComposerStaticInit4b000651708aba2651024c3b9fb5de3d
     public static $prefixLengthsPsr4 = array (
         'A' => 
         array (
-            'AluraPlay\\' => 10,
+            'Alura\\Mvc\\' => 10,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'AluraPlay\\' => 
+        'Alura\\Mvc\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),

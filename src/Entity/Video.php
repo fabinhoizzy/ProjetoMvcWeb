@@ -16,7 +16,7 @@ class Video
         $this->setUrl($url);
     }
 
-    private function setUrl(string $url)
+    private function setUrl(string $url): void
     {
         if (filter_var($url, FILTER_VALIDATE_URL) === false) {
             throw new \InvalidArgumentException();

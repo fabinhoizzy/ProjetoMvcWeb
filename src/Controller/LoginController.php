@@ -4,14 +4,16 @@ declare(strict_types=1);
 
 namespace Alura\Mvc\Controller;
 
+use PDO;
+
 class LoginController implements Controller
 {
     private \PDO $pdo;
 
     public function __construct()
     {
-        $dbPath = __DIR__ . '/../../banco.sqlite';
-        $this->pdo = new \PDO("sqlite:$dbPath");
+        require_once __DIR__ . '/../../config.php';
+        $this->pdo = new PDO('mysql:host=localhost;dbname=aluraplay','root','izzyroot');
     }
 
     public function processaRequisicao(): void
@@ -28,6 +30,7 @@ class LoginController implements Controller
         $correctPassword = password_verify($password, $userData['password'] ?? '');
 
         if ($correctPassword) {
+            $_SESSION['logado'] = true;
             header('Location: /');
         } else {
             header('Location: /login?sucesso=0');

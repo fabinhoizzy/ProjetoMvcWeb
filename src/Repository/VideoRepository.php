@@ -9,8 +9,10 @@ use PDO;
 
 class VideoRepository
 {
-    public function __construct(private PDO $pdo)
+    public function __construct()
     {
+        require_once __DIR__ . '/../../config.php';
+        $this->pdo = new PDO('mysql:host=localhost;dbname=aluraplay','root','izzyroot');
     }
 
     public function add(Video $video): bool
@@ -63,7 +65,7 @@ class VideoRepository
         );
     }
 
-    public function find(int $id)
+    public function find(int $id): Video
     {
         $statement = $this->pdo->prepare('SELECT * FROM videos WHERE id = ?;');
         $statement->bindValue(1, $id, \PDO::PARAM_INT);

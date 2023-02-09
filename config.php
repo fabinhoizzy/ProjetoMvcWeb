@@ -1,8 +1,8 @@
 <?php
 
 try {
-    $conn = new PDO('mysql:host=localhost;dbname=aluraplay', 'root', '');
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo = new PDO('mysql:host=localhost;dbname=aluraplay', 'root', 'izzyroot');
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch(PDOException $e) {
     echo 'ERROR: ' . $e->getMessage();
 }

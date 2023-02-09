@@ -9,7 +9,7 @@ use Alura\Mvc\Repository\VideoRepository;
 
 class VideoFormController implements Controller
 {
-    public function __construct(private VideoRepository $repository)
+    public function __construct(private readonly VideoRepository $repository)
     {
     }
 
