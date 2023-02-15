@@ -28,3 +28,11 @@
     </nav>
 
 </header>
+
+<?php if (isset($_SESSION['erro_message'])): ?>
+<h2 class="formulario__titulo erro">
+    <?= $_SESSION['erro_message']; ?>
+    <?php unset($_SESSION['erro_message']); ?>
+</h2>
+
+<?php endif; ?>
