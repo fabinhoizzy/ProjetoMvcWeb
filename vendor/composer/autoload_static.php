@@ -7,6 +7,20 @@ namespace Composer\Autoload;
 class ComposerStaticInit4b000651708aba2651024c3b9fb5de3d
 {
     public static $prefixLengthsPsr4 = array (
+        'P' => 
+        array (
+            'Psr\\Http\\Server\\' => 16,
+            'Psr\\Http\\Message\\' => 17,
+        ),
+        'N' => 
+        array (
+            'Nyholm\\Psr7\\' => 12,
+            'Nyholm\\Psr7Server\\' => 18,
+        ),
+        'H' => 
+        array (
+            'Http\\Message\\' => 13,
+        ),
         'A' => 
         array (
             'Alura\\Mvc\\' => 10,
@@ -14,6 +28,27 @@ class ComposerStaticInit4b000651708aba2651024c3b9fb5de3d
     );
 
     public static $prefixDirsPsr4 = array (
+        'Psr\\Http\\Server\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-server-handler/src',
+        ),
+        'Psr\\Http\\Message\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
+        'Nyholm\\Psr7\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nyholm/psr7/src',
+        ),
+        'Nyholm\\Psr7Server\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nyholm/psr7-server/src',
+        ),
+        'Http\\Message\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/php-http/message-factory/src',
+        ),
         'Alura\\Mvc\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
